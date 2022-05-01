@@ -2432,12 +2432,6 @@ void MainWindow::on_actionEnglish_triggered()
     HinFlag = 0 , SanFlag = 0;
 }
 
-void MainWindow::on_actionBold_triggered()
-{
-    QFont font = ui -> textEdit -> currentFont();
-        font.bold() == true ? font.setBold(false) : font.setBold(true);
-        ui -> textEdit -> setCurrentFont(font);
-}
 void MainWindow::on_actionSuperscript_triggered()
 {
     QTextCharFormat format;
@@ -2456,7 +2450,18 @@ void MainWindow::on_actionSubscript_triggered()
 }
 
 
-void MainWindow::on_actionUn_Bold_triggered()
+
+
+
+void MainWindow::on_actionBold_2_triggered()
+{
+    QFont font = ui -> textEdit -> currentFont();
+        font.bold() == true ? font.setBold(false) : font.setBold(true);
+        ui -> textEdit -> setCurrentFont(font);
+}
+
+
+void MainWindow::on_actionUnbold_triggered()
 {
     ui->textEdit->undo();
 }

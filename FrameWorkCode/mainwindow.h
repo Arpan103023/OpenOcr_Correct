@@ -152,6 +152,10 @@ private slots:
     void on_actionSuperscript_triggered();
     void on_actionUn_Bold_triggered();
 
+    void on_actionBold_2_triggered();
+
+    void on_actionUnbold_triggered();
+
 private:
     Ui::MainWindow *ui;
 

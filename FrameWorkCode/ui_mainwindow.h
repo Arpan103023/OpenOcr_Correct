@@ -70,6 +70,8 @@ public:
     QAction *actionSanskrit;
     QAction *actionHindi;
     QAction *actionEnglish;
+    QAction *actionBold;
+    QAction *actionUnBold;
     QWidget *centralWidget;
     QVBoxLayout *verticalLayout;
     QProgressBar *progressBar;
@@ -279,6 +281,8 @@ public:
         menuBar->addAction(menuConvertFiles->menuAction());
         menuBar->addAction(menuFeatureExtraction->menuAction());
         menuOCR_Correction_Window->addAction(actionNew);
+        menuOCR_Correction_Window->addAction(actionBold);
+        menuOCR_Correction_Window->addAction(actionUnBold);
         menuOCR_Correction_Window->addAction(actionOpen);
         menuOCR_Correction_Window->addAction(actionSave);
         menuOCR_Correction_Window->addAction(actionSave_As);

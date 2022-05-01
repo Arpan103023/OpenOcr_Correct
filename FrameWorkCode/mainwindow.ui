@@ -47,28 +47,6 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QTextEdit" name="textEdit">
-        <property name="maximumSize">
-         <size>
-          <width>120</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <family>FreeSans</family>
-          <italic>true</italic>
-         </font>
-        </property>
-        <property name="sizeAdjustPolicy">
-         <enum>QAbstractScrollArea::AdjustToContents</enum>
-        </property>
-        <property name="readOnly">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QTextBrowser" name="textBrowser">
         <property name="font">
          <font>
@@ -120,6 +98,28 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="resizeAnchor">
          <enum>QGraphicsView::AnchorViewCenter</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="textEdit">
+        <property name="maximumSize">
+         <size>
+          <width>120</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>FreeSans</family>
+          <italic>true</italic>
+         </font>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustToContents</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -206,12 +206,28 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionHindi"/>
     <addaction name="actionEnglish"/>
    </widget>
+   <widget class="QMenu" name="menuBold">
+    <property name="title">
+     <string>Bold/UnBold</string>
+    </property>
+    <addaction name="actionBold_2"/>
+    <addaction name="actionUnbold"/>
+   </widget>
+   <widget class="QMenu" name="menuSuperScript_SubScript">
+    <property name="title">
+     <string>SuperScript/SubScript</string>
+    </property>
+    <addaction name="actionSuperScript"/>
+    <addaction name="actionSubScript"/>
+   </widget>
    <addaction name="menuSelectLanguage"/>
    <addaction name="menuOCR_Correction_Window"/>
    <addaction name="menuCreateReports"/>
    <addaction name="menuSaveVariables"/>
    <addaction name="menuConvertFiles"/>
    <addaction name="menuFeatureExtraction"/>
+   <addaction name="menuBold"/>
+   <addaction name="menuSuperScript_SubScript"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -487,22 +503,28 @@ p, li { white-space: pre-wrap; }
     <string>English</string>
    </property>
   </action>
-  <action name="actionBold">
+  <action name="actionBold_2">
    <property name="text">
     <string>Bold</string>
    </property>
   </action>
-  <action name="actionUn_Bold">
+  <action name="actionUnbold">
    <property name="text">
-    <string>Un-Bold</string>
+    <string>Unbold</string>
+   </property>
+  </action>
+  <action name="actionSuperScript">
+   <property name="text">
+    <string>SuperScript</string>
+   </property>
+  </action>
+  <action name="actionSubScript">
+   <property name="text">
+    <string>SubScript</string>
    </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <tabstops>
-  <tabstop>textBrowser</tabstop>
-  <tabstop>graphicsView</tabstop>
- </tabstops>
  <resources>
   <include location="AppResources.qrc"/>
  </resources>
